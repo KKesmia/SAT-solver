@@ -12,7 +12,7 @@ public class Try {
 		
 		int[] var_popu = { 250, 500 , 750, 1000};
 		int[] var_gene = {1000, 2000, 4000, 6000 , 8000, 10000};
-		
+		// default values generations = 250, population = 100, var_cross = 0.5, var_muta = 0.1
 		/*
 		System.out.println("cross");
 		for(double c :var_cross) {
@@ -26,7 +26,7 @@ public class Try {
 		
 		System.out.println("muta");
 		for(double c :var_muta) {
-			start = new Ga(125 ,2125 ,0.5 , c,"C:\\Users\\Moi\\Desktop\\test_SAT\\125\\uf125-01.cnf");
+			start = new Ga(100 ,250 ,0.5 , c,"C:\\Users\\Moi\\Desktop\\test_SAT\\125\\uf125-01.cnf");
 			System.out.println(c+"--"+start.Execution());
 			System.out.println(c+"--"+start.Execution());
 			System.out.println(c+"--"+start.Execution());
@@ -43,7 +43,7 @@ public class Try {
 			}
 		}
 		*/
-		long stt;
+		long timestart;
 		String c;
 		
 		System.out.println("all files");
@@ -51,7 +51,7 @@ public class Try {
 			start = new Ga("C:\\Users\\Moi\\Desktop\\test_SAT\\uf150-0"+i+".cnf");
 			stt = System.currentTimeMillis(); 
 			c = start.Execution();
-			System.out.print((System.currentTimeMillis() - stt )+",");
+			System.out.print((System.currentTimeMillis() - timestart )+",");
 			i++;
 		}
 		
